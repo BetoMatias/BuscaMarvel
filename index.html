@@ -6,15 +6,17 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container mt-5">
         <div class="row">
             <div class="col-6 offset-3">
                 <label for="Name">Capas com o seu/sua heroi/heroina</label>
-                <input type="text" class="form-control" placeholder="Quem você quer saber mais?" id="Name" name=character>
+                <input type="text" class="form-control mb-2" placeholder="Quem você quer saber mais?" id="Name" name=character>
                 <button type="button" class="btn btn-danger btn-block" onclick="getCharacter()">Buscar!</button>
-                <label id="heroName"></label>
-                <label id="comics"></label>
+                <h1 id="heroName" class="text-center"></h1>
             </div>
+        </div>
+        <div id="comics_lista" class="row" >
+
         </div>
 
         <!-- toDo: margin, padding,  -->

@@ -1,7 +1,10 @@
 
+//PARA DESENVOLVIMENTO
 
-var pubkey = "key publica";
-var pvtkey = "key privada";
+//PARA PRODUÇÃO
+var pubkey = "key_publica";
+var pvtkey = "key_privada";
+
 var ts = new Date().getTime();
 
 function getCharacter() {
@@ -17,13 +20,16 @@ function getCharacter() {
 
   var character = JSON.parse(xmlHttp.responseText);
 
-  document.getElementById("heroName").innerHTML = character.data.results[0].name;
+  //Apresenta o nome do primeiro Heroi da pesquisa.
+  document.getElementById("heroName").innerHTML = character.data.results[0].name; 
 
 }
 
 function Comics(character) {
 
-  for(var i = 0; i<11;++){ 
+  for(var i = 0; i<11; i++){ 
   document.getElementById("comics").innerHTML = character.data.results[0].comics.items[i];
+  document.createElement("div");
+  
   }
 }
