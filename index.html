@@ -3,20 +3,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="container mt-5">
+    <div class="container mt-4">
         <div class="row">
             <div class="col-6 offset-3">
-                <label for="Name">Capas com o seu/sua heroi/heroina</label>
-                <input type="text" class="form-control mb-2" placeholder="Quem você quer saber mais?" id="Name" name=character>
+                <label for="Name" class="blockquote text-center offset-2 my-1">Listar capas de HQs com: </label>
+
+                <select id="CharacterSelect" class="custom-select custom-select-sm my-2">
+                    <option value=1009268 selected>Deadpool</option>
+                    <option value=1009327>Jean Grey</option>
+                    <option value=1009610>Spider Man</option>
+                    <option value=1009546>Rogue</option>
+                    <option value=1009718>Wolverine</option>
+                    <option value=1009243>Colossus</option>
+                    <option value=1009310>Emma Frost</option>
+                    <option value=1009472>Nightcrawler</option>
+                    <option value=1009508>Kitty Pryde</option>
+                    <option value=1009267>Dazzler</option>
+
+
+                </select>
+
+                <!-- <input type="text" class="form-control mb-2" placeholder="Quem você quer saber mais?" id="Name" name=character> -->
                 <button type="button" class="btn btn-danger btn-block" onclick="getCharacter()">Buscar!</button>
                 <h1 id="heroName" class="text-center"></h1>
+
+
             </div>
         </div>
-        <div id="comics_lista" class="row" >
-
+        <div id="comics_list" class="row">
+            <!-- <div class="col-4" >
+                <img id="cover" class="hide" src="" width="auto" height="auto">
+            </div> -->
         </div>
 
         <!-- toDo: margin, padding,  -->
