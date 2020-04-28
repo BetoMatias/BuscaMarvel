@@ -35,7 +35,7 @@ function Comics(character) {
 
   var comic = document.getElementById("comics_list");
 
-  if (document.body.contains(document.getElementById("coverSearch"))) {
+  if (document.body.contains(document.getElementById('coverSearch'))) {
 
     var comicList = document.getElementById("comics_list");
     comicList.parentNode.removeChild(div);
@@ -47,9 +47,10 @@ function Comics(character) {
     var imageCover = document.createElement("img");
     var divExtra = document.createElement("div");
 
-    divExtra.classList.add("id='coverSearch");
+    divExtra.classList.add("id='coverSearch'");
     divExtra.classList.add("col-4");
     divExtra.classList.add("my-3");
+
     imageCover.classList.add("cover");
     imageCover.classList.add("shadow-lg");
     imageCover.classList.add("p-3");
