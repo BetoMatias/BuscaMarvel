@@ -14,8 +14,10 @@ function getCharacter() {
   
   //Busca herói por nome
   // var url = "http://gateway.marvel.com/v1/public/characters?ts="+ts + "&apikey="+pubkey + "&hash="+hashkey + "&name="+hero;
+
   //Busca comic por id de herói
-  var url = "https://gateway.marvel.com:443/v1/public/characters/" + hero + "/comics?orderBy=issueNumber&ts=" + ts + "&apikey=" + pubkey + "&hash=" + hashkey;
+  var url = "https://gateway.marvel.com:443/v1/public/characters/" + hero + "/comics?format=comic&formatType=comic&noVariants=true&orderBy=-onsaleDate&ts=" + ts + "&apikey=" + pubkey + "&hash=" + hashkey;
+     
 
   var xmlHttp = new XMLHttpRequest();
   xmlHttp.open("GET", url, false);
@@ -24,18 +26,6 @@ function getCharacter() {
   var comics = JSON.parse(xmlHttp.responseText);
   
   Comics(comics);
-
-  // Apresenta o nome do primeiro Heroi da pesquisa.
-  // document.getElementById("heroName").innerHTML = character.data.results[0].description;
-  
-  // Apresenta a primeira cover do heroi.
-  // document.getElementById("cover").src = character.data.results[0].images[0].path +"."+ character.data.results[0].images[0].extension; 
-
-  
-  // const imageCover = document.querySelector('#cover');
-  // if (imageCover.classList.contains("hide")) {
-  //   imageCover.classList.remove("hide");
-  // }
 }
 
 function Comics(character) {
@@ -45,24 +35,29 @@ function Comics(character) {
 
   var comic = document.getElementById("comics_list");
 
-  if (comic != null) {
-    //comic.removeChild(div);
+  if (document.body.contains(document.getElementById("coverSearch"))) {
+
+    var comicList = document.getElementById("comics_list");
+    comicList.parentNode.removeChild(div);
 
   }
-
-  // ver comic possui algo, se possui deleta, senão ignora esse passo
 
   for (var i = 0; i < 9; i++) {
 
     var imageCover = document.createElement("img");
     var divExtra = document.createElement("div");
 
+    divExtra.classList.add("id='coverSearch");
     divExtra.classList.add("col-4");
     divExtra.classList.add("my-3");
     imageCover.classList.add("cover");
+    imageCover.classList.add("shadow-lg");
+    imageCover.classList.add("p-3");
+    imageCover.classList.add("mb-5");
+    imageCover.classList.add("bg-white");
+    imageCover.classList.add("rounded");
 
     imageCover.src = character.data.results[i].thumbnail.path + "." + character.data.results[i].thumbnail.extension;
-
 
     divExtra.appendChild(imageCover)
     comic.appendChild(divExtra);
