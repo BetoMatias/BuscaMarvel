@@ -34,20 +34,26 @@ function Comics(character) {
   // var comics = character.data.results[0].comics;
 
   var comic = document.getElementById("comics_list");
+  //Quantas edições
+  var qttIssues = 9;
+
 
   if (document.body.contains(document.getElementById('coverSearch'))) {
 
+    for (var i=0; i<qttIssues
+  ;i++){
     var comicList = document.getElementById("comics_list");
-    comicList.parentNode.removeChild(div);
-
+    comicList.removeChild(document.getElementById('coverSearch'));
+    }
   }
 
-  for (var i = 0; i < 9; i++) {
+  for (var i = 0; i < qttIssues
+; i++) {
 
     var imageCover = document.createElement("img");
     var divExtra = document.createElement("div");
 
-    divExtra.classList.add("id='coverSearch'");
+    divExtra.id="coverSearch";
     divExtra.classList.add("col-4");
     divExtra.classList.add("my-3");
 
