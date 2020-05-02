@@ -1,13 +1,1 @@
-body{
-    background-color: rgb(162, 167, 238);
-}
-
-.hide {
-    display: none;
-}
-.cover {
-    width: 100%;
-    height: auto;
-
-}
-
+body{background-color:rgb(162,167,238)}.hide{display:none}.cover{width:100%;height:auto}
