@@ -54,10 +54,10 @@ function Comics(character) {
     divExtra.classList.add("my-3");
 
     imageCover.classList.add("cover");
-    imageCover.classList.add("shadow-lg");
+    imageCover.classList.add("shadow-sm");
     imageCover.classList.add("p-3");
     imageCover.classList.add("mb-5");
-    imageCover.classList.add("bg-white");
+    imageCover.classList.add("bg-cover");
     imageCover.classList.add("rounded");
 
     imageCover.src = character.data.results[i].thumbnail.path + "." + character.data.results[i].thumbnail.extension;
