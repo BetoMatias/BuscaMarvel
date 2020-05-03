@@ -1,9 +1,5 @@
 
-//PARA DESENVOLVIMENTO
 
-//PARA PRODUÇÃO
-// var pubkey = "key_publica";
-// var pvtkey = "key_privada";
 
 var ts = new Date().getTime();
 
